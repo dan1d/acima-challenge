@@ -42,6 +42,8 @@ This is a full-stack weather application that fetches weather data based on the 
 
     ```bash
     make setup
+    make db-create
+    make db-migrate
     ```
 
    This will:
