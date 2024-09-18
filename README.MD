@@ -16,7 +16,7 @@ This is a full-stack weather application that fetches weather data based on the 
 1. **Clone the repository**:
 
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:dan1d/acima-challenge.git
     cd acima-challenge
     ```
 
