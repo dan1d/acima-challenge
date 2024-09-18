@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  backend_test:
+    build:
+      context: ./backend
+      dockerfile: .docker/development/Dockerfile
+    environment:
+      - RAILS_ENV=test
+      - DATABASE_URL=postgresql://postgres:password@db:5432/acima_test
+      - OPENWEATHERMAP_API_KEY=${OPENWEATHERMAP_API_KEY}
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rake db:create db:migrate RAILS_ENV=test && bundle exec rspec"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: .docker/development/Dockerfile
+    environment:
+      - RAILS_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/acima_development
+      - OPENWEATHERMAP_API_KEY=${OPENWEATHERMAP_API_KEY}
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails server -b '0.0.0.0' -p 3000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: .docker/development/Dockerfile
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    command: npm start
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: acima_development
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:

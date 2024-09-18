@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<OPENWEATHERMAP_API_KEY>&exclude=minutely,hourly,daily,alerts&lat=40.7128&lon=-74.006&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 17 Sep 2024 22:32:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '502'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?exclude=minutely%2Chourly%2Cdaily%2Calerts&lat=40.71&lon=-74.01&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-74.006,"lat":40.7128},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":23.7,"feels_like":23.9,"temp_min":22.19,"temp_max":24.61,"pressure":1021,"humidity":68,"sea_level":1021,"grnd_level":1019},"visibility":10000,"wind":{"speed":4.63,"deg":40},"clouds":{"all":0},"dt":1726612345,"sys":{"type":2,"id":2008776,"country":"US","sunrise":1726569547,"sunset":1726614105},"timezone":-14400,"id":5128581,"name":"New
+        York","cod":200}'
+  recorded_at: Tue, 17 Sep 2024 22:32:25 GMT
+recorded_with: VCR 6.3.1

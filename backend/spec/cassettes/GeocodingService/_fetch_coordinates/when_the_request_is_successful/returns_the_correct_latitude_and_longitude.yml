@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/geo/1.0/direct?appid=<OPENWEATHERMAP_API_KEY>&limit=1&q=New%20York,NY,US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 17 Sep 2024 22:24:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '707'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/direct?limit=1&q=new+york%2cny%2cus"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6Ik5ldyBZb3JrIENvdW50eSIsImxvY2FsX25hbWVzIjp7ImN5IjoiRWZyb2cgTmV3eWRkIiwiamEiOiLjg4vjg6Xjg7zjg6jjg7zjgq8iLCJkZSI6Ik5ldyBZb3JrIiwiZnIiOiJOZXcgWW9yayIsImNhIjoiTm92YSBZb3JrIiwiaXMiOiJOw71qYSBKw7NydsOtayIsImhlIjoi16DXmdeVINeZ15XXqNenIiwiZW4iOiJOZXcgWW9yayIsInpoIjoi57q957qmL+e0kOe0hCIsImdsIjoiTm92YSBZb3JrIiwiaXQiOiJOZXcgWW9yayIsImJlIjoi0J3RjNGOLdCB0YDQuiIsInBsIjoiTm93eSBKb3JrIiwiZWwiOiLOnc6tzrEgzqXPjM+BzrrOtyIsImtvIjoi64m07JqVIiwiaGkiOiLgpKjgpY3gpK/gpYLgpK/gpYrgpLDgpY3gpJXgpY0iLCJmYSI6ItmG24zZiNuM2YjYsdqpIiwicnUiOiLQndGM0Y4t0JnQvtGA0LoiLCJlcyI6Ik51ZXZhIFlvcmsiLCJhciI6ItmG2YrZiNmK2YjYsdmDIiwidGUiOiLgsKjgsY3gsK/gsYLgsK/gsYrgsLDgsY3gsJXgsY0iLCJrbiI6IuCyqOCzjeCyr+CzguCyr+CziuCysOCzjeCyleCzjSIsInZpIjoiTmV3IFlvcmsiLCJ1ayI6ItCd0YzRji3QmdC+0YDQuiIsImVvIjoiTm92am9ya28iLCJvYyI6Ik7DsnZhIFlvcmsiLCJwdCI6Ik5vdmEgSW9ycXVlIiwiY3MiOiJOZXcgWW9yayJ9LCJsYXQiOjQwLjcxMjcyODEsImxvbiI6LTc0LjAwNjAxNTIsImNvdW50cnkiOiJVUyIsInN0YXRlIjoiTmV3IFlvcmsifV0=
+  recorded_at: Tue, 17 Sep 2024 22:24:24 GMT
+recorded_with: VCR 6.3.1

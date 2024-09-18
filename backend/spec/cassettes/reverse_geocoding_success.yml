@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/geo/1.0/reverse?appid=<OPENWEATHERMAP_API_KEY>&lat=40.7128&limit=1&lon=-74.006
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 18 Sep 2024 03:01:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '707'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/reverse?lat=40.71&limit=1&lon=-74.01"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6Ik5ldyBZb3JrIENvdW50eSIsImxvY2FsX25hbWVzIjp7ImNzIjoiTmV3IFlvcmsiLCJlbiI6Ik5ldyBZb3JrIiwiYmUiOiLQndGM0Y4t0IHRgNC6Iiwia24iOiLgsqjgs43gsq/gs4Lgsq/gs4rgsrDgs43gspXgs40iLCJjYSI6Ik5vdmEgWW9yayIsInJ1Ijoi0J3RjNGOLdCZ0L7RgNC6IiwiemgiOiLnur3nuqYv57SQ57SEIiwiaXQiOiJOZXcgWW9yayIsImVzIjoiTnVldmEgWW9yayIsImdsIjoiTm92YSBZb3JrIiwiZmEiOiLZhtuM2YjbjNmI2LHaqSIsImRlIjoiTmV3IFlvcmsiLCJlbCI6Is6dzq3OsSDOpc+Mz4HOus63IiwiamEiOiLjg4vjg6Xjg7zjg6jjg7zjgq8iLCJ2aSI6Ik5ldyBZb3JrIiwiaGUiOiLXoNeZ15Ug15nXldeo16ciLCJlbyI6Ik5vdmpvcmtvIiwicHQiOiJOb3ZhIElvcnF1ZSIsImN5IjoiRWZyb2cgTmV3eWRkIiwib2MiOiJOw7J2YSBZb3JrIiwiZnIiOiJOZXcgWW9yayIsImFyIjoi2YbZitmI2YrZiNix2YMiLCJpcyI6Ik7DvWphIErDs3J2w61rIiwiaGkiOiLgpKjgpY3gpK/gpYLgpK/gpYrgpLDgpY3gpJXgpY0iLCJrbyI6IuuJtOyalSIsInBsIjoiTm93eSBKb3JrIiwidGUiOiLgsKjgsY3gsK/gsYLgsK/gsYrgsLDgsY3gsJXgsY0iLCJ1ayI6ItCd0YzRji3QmdC+0YDQuiJ9LCJsYXQiOjQwLjcxMjcyODEsImxvbiI6LTc0LjAwNjAxNTIsImNvdW50cnkiOiJVUyIsInN0YXRlIjoiTmV3IFlvcmsifV0=
+  recorded_at: Wed, 18 Sep 2024 03:01:34 GMT
+recorded_with: VCR 6.3.1

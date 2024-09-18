@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/geo/1.0/reverse?appid=<OPENWEATHERMAP_API_KEY>&lat=40.7128&limit=1&lon=-74.006
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 18 Sep 2024 03:07:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '707'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/reverse?lat=40.71&limit=1&lon=-74.01"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6Ik5ldyBZb3JrIENvdW50eSIsImxvY2FsX25hbWVzIjp7InpoIjoi57q957qmL+e0kOe0hCIsInB0IjoiTm92YSBJb3JxdWUiLCJoZSI6Iteg15nXlSDXmdeV16jXpyIsImJlIjoi0J3RjNGOLdCB0YDQuiIsInJ1Ijoi0J3RjNGOLdCZ0L7RgNC6IiwiamEiOiLjg4vjg6Xjg7zjg6jjg7zjgq8iLCJhciI6ItmG2YrZiNmK2YjYsdmDIiwia28iOiLribTsmpUiLCJlbiI6Ik5ldyBZb3JrIiwiaXQiOiJOZXcgWW9yayIsInBsIjoiTm93eSBKb3JrIiwiY3kiOiJFZnJvZyBOZXd5ZGQiLCJkZSI6Ik5ldyBZb3JrIiwiZW8iOiJOb3Zqb3JrbyIsImZyIjoiTmV3IFlvcmsiLCJvYyI6Ik7DsnZhIFlvcmsiLCJrbiI6IuCyqOCzjeCyr+CzguCyr+CziuCysOCzjeCyleCzjSIsImVzIjoiTnVldmEgWW9yayIsImdsIjoiTm92YSBZb3JrIiwiY3MiOiJOZXcgWW9yayIsImZhIjoi2YbbjNmI24zZiNix2qkiLCJ2aSI6Ik5ldyBZb3JrIiwiZWwiOiLOnc6tzrEgzqXPjM+BzrrOtyIsImlzIjoiTsO9amEgSsOzcnbDrWsiLCJoaSI6IuCkqOCljeCkr+ClguCkr+CliuCksOCljeCkleCljSIsImNhIjoiTm92YSBZb3JrIiwidGUiOiLgsKjgsY3gsK/gsYLgsK/gsYrgsLDgsY3gsJXgsY0iLCJ1ayI6ItCd0YzRji3QmdC+0YDQuiJ9LCJsYXQiOjQwLjcxMjcyODEsImxvbiI6LTc0LjAwNjAxNTIsImNvdW50cnkiOiJVUyIsInN0YXRlIjoiTmV3IFlvcmsifV0=
+  recorded_at: Wed, 18 Sep 2024 03:07:42 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<OPENWEATHERMAP_API_KEY>&exclude=minutely,hourly,daily,alerts&lat=40.7128&lon=-74.006&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 18 Sep 2024 03:07:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '499'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?exclude=minutely%2Chourly%2Cdaily%2Calerts&lat=40.71&lon=-74.01&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-74.006,"lat":40.7127},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"base":"stations","main":{"temp":21.36,"feels_like":21.33,"temp_min":18.49,"temp_max":22.3,"pressure":1020,"humidity":68,"sea_level":1020,"grnd_level":1019},"visibility":10000,"wind":{"speed":3.6,"deg":40},"clouds":{"all":0},"dt":1726628679,"sys":{"type":1,"id":4610,"country":"US","sunrise":1726569547,"sunset":1726614105},"timezone":-14400,"id":5128581,"name":"New
+        York","cod":200}'
+  recorded_at: Wed, 18 Sep 2024 03:07:42 GMT
+recorded_with: VCR 6.3.1
