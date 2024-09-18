@@ -4,12 +4,18 @@
 This is a full-stack weather application that fetches weather data based on the user's location using **Ruby on Rails** for the backend and **React** for the frontend. The weather data is retrieved from the OpenWeatherMap API and cached in a PostgreSQL database. This project uses Docker and supports a full development and test environment.
 
 ## Table of Contents
+- [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Testing](#testing)
 - [Services](#services)
 - [API](#api)
 - [Environment Variables](#environment-variables)
+
+## Prerequisites
+
+- Docker
+- Docker compose
 
 ## Setup
 
