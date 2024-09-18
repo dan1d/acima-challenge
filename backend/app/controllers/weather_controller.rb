@@ -4,6 +4,10 @@ class WeatherController < ApplicationController
   def show
     weather = WeatherCacheService.new(weather_params).get_weather
     render json: weather, serializer: WeatherSerializer, status: :ok
+  rescue StandardError => e # this < should be a more specific error class
+    Rails.logger.error "Error fetching weather data: #{e.message}"
+    error_message = 'Unable to fetch weather data. Please try again later.'
+    render json: { error: error_message }, status: :internal_server_error
   end
 
   private
