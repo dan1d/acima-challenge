@@ -11,6 +11,7 @@ This is a full-stack weather application that fetches weather data based on the 
 - [Services](#services)
 - [API](#api)
 - [Environment Variables](#environment-variables)
+- [Cleanup](#cleanup)
 
 ## Prerequisites
 
@@ -110,3 +111,12 @@ The following environment variables need to be configured:
 | `DATABASE_URL`           | The PostgreSQL connection URL                         |
 
 Make sure you have the correct `.env` setup with your own `OPENWEATHERMAP_API_KEY` before running the project.
+
+## Cleanup
+
+This task could be ran daily with `whenever` gem maybe.
+It will clear stale records.
+
+```bash
+  docker compose exec backend bundle exec rake weather:cleanup
+```
